@@ -17,10 +17,14 @@ basic.forever(function () {
             maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 35)
         }
     } else {
-        if (line_seen > 0) {
+        if (line_seen > 90) {
             line_seen += -1
             maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 35)
             maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 10)
+        } else if (line_seen > 0) {
+            line_seen += -1
+            maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 25)
+            maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CCW, 25)
         } else {
             maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 30)
         }
