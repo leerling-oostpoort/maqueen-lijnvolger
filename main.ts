@@ -3,6 +3,7 @@ let left_line = 0
 maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 25)
 let line_seen = 0
 basic.pause(1000)
+basic.showIcon(IconNames.Happy)
 basic.forever(function () {
     if (maqueen.Ultrasonic(PingUnit.Centimeters) < 5) {
         maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, 25)
